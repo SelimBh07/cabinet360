@@ -1,0 +1,25 @@
+<?php
+return [
+    'settings' => 'Settings',
+    'profile_info' => 'Profile Information',
+    'change_password' => 'Change Password',
+    'cabinet_info' => 'Cabinet Information',
+    'appearance' => 'Appearance',
+    'theme' => 'Theme',
+    'dark' => 'Dark',
+    'light' => 'Light',
+    'language' => 'Language',
+    'french' => 'French',
+    'english' => 'English',
+    'arabic' => 'Arabic',
+    'notifications' => 'Notifications',
+    'email_notifications' => 'Email Notifications',
+    'appointment_reminders' => 'Appointment Reminders',
+    'payment_reminders' => 'Payment Reminders',
+    'save_changes' => 'Save Changes',
+    'current_password' => 'Current Password',
+    'new_password' => 'New Password',
+    'confirm_password' => 'Confirm New Password',
+    'success_update' => 'Update successful!',
+    'error_update' => 'Error during update!'
+];

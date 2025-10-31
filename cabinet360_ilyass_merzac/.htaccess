@@ -1,0 +1,87 @@
+# LexManage - Apache Configuration
+# Security and Performance Optimizations
+
+# Enable Rewrite Engine
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /Cabinet360/
+    
+    # Redirect to login if accessing root
+    RewriteCond %{REQUEST_URI} ^/$
+    RewriteRule ^(.*)$ login.php [L]
+    
+    # Prevent directory browsing
+    Options -Indexes
+</IfModule>
+
+# Security Headers
+<IfModule mod_headers.c>
+    # Prevent clickjacking
+    Header set X-Frame-Options "SAMEORIGIN"
+    
+    # XSS Protection
+    Header set X-XSS-Protection "1; mode=block"
+    
+    # Prevent MIME type sniffing
+    Header set X-Content-Type-Options "nosniff"
+    
+    # Referrer Policy
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Protect configuration files
+<FilesMatch "^(config\.php|auth\.php)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Protect database file
+<FilesMatch "^database\.sql$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Block access to hidden files
+<FilesMatch "^\.">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# PHP Security Settings
+<IfModule mod_php7.c>
+    php_flag display_errors Off
+    php_flag log_errors On
+    php_flag register_globals Off
+    php_flag magic_quotes_gpc Off
+    php_value upload_max_filesize 5M
+    php_value post_max_size 5M
+    php_value max_execution_time 60
+    php_value max_input_time 60
+</IfModule>
+
+# Compression for better performance
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
+
+# Browser Caching
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType application/pdf "access plus 1 month"
+    ExpiresByType image/x-icon "access plus 1 year"
+</IfModule>
+
+# Error Pages (optional)
+ErrorDocument 403 /Cabinet360/login.php
+ErrorDocument 404 /Cabinet360/index.php
+
+# UTF-8 Encoding
+AddDefaultCharset UTF-8
+

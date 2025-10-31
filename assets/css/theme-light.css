@@ -1,0 +1,63 @@
+/* Light Theme Variables */
+:root {
+    --primary-color: #D4AF37;
+    --text-color: #333333;
+    --bg-color: #ffffff;
+    --sidebar-bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --border-color: #dee2e6;
+    --hover-bg: #f8f9fa;
+    --input-bg: #ffffff;
+    --input-border: #ced4da;
+    --table-stripe: rgba(0, 0, 0, 0.05);
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Shared styles */
+body {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: all 0.3s ease;
+}
+
+.sidebar {
+    background-color: var(--sidebar-bg);
+    border-right: 1px solid var(--border-color);
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+}
+
+.table {
+    color: var(--text-color);
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: var(--table-stripe);
+}
+
+.form-control {
+    background-color: var(--input-bg);
+    border-color: var(--input-border);
+    color: var(--text-color);
+}
+
+.btn-outline-primary {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+.nav-link {
+    color: var(--text-color);
+}
+
+.nav-link:hover {
+    background-color: var(--hover-bg);
+}

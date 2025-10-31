@@ -1,0 +1,25 @@
+<?php
+return [
+    'settings' => 'الإعدادات',
+    'profile_info' => 'معلومات الملف الشخصي',
+    'change_password' => 'تغيير كلمة المرور',
+    'cabinet_info' => 'معلومات المكتب',
+    'appearance' => 'المظهر',
+    'theme' => 'الثيم',
+    'dark' => 'داكن',
+    'light' => 'فاتح',
+    'language' => 'اللغة',
+    'french' => 'الفرنسية',
+    'english' => 'الإنجليزية',
+    'arabic' => 'العربية',
+    'notifications' => 'الإشعارات',
+    'email_notifications' => 'إشعارات البريد الإلكتروني',
+    'appointment_reminders' => 'تذكيرات المواعيد',
+    'payment_reminders' => 'تذكيرات الدفع',
+    'save_changes' => 'حفظ التغييرات',
+    'current_password' => 'كلمة المرور الحالية',
+    'new_password' => 'كلمة المرور الجديدة',
+    'confirm_password' => 'تأكيد كلمة المرور الجديدة',
+    'success_update' => 'تم التحديث بنجاح!',
+    'error_update' => 'حدث خطأ أثناء التحديث!'
+];

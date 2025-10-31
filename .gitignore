@@ -1,0 +1,73 @@
+# LexManage - Git Ignore File
+
+# Uploads Directory (contains sensitive client documents)
+uploads/*
+!uploads/.gitkeep
+
+# Configuration Files (contains database credentials)
+config/config.php
+
+# Logs
+*.log
+logs/
+
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# IDE Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# Temporary Files
+tmp/
+temp/
+cache/
+*.tmp
+
+# Backup Files
+*.bak
+*.backup
+*~
+
+# PHP
+.env
+.env.local
+vendor/
+composer.lock
+
+# Node (if you add frontend build tools later)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Database Dumps (except the main schema)
+*.sql
+!database.sql
+
+# Error Logs
+error_log
+php_errors.log
+
+# Session Files
+sessions/
+
+# Miscellaneous
+*.zip
+*.tar
+*.tar.gz
+*.rar
+

@@ -1,0 +1,59 @@
+/* Dark Theme Variables */
+:root[data-theme="dark"] {
+    --primary-color: #D4AF37;
+    --text-color: #e1e1e1;
+    --bg-color: #1a1a1a;
+    --sidebar-bg: #2d2d2d;
+    --card-bg: #333333;
+    --border-color: #404040;
+    --hover-bg: #404040;
+    --input-bg: #2d2d2d;
+    --input-border: #404040;
+    --table-stripe: rgba(255, 255, 255, 0.05);
+    --shadow: rgba(0, 0, 0, 0.3);
+}
+
+/* Additional dark theme specific overrides */
+[data-theme="dark"] .table {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .form-control {
+    background-color: var(--input-bg);
+    border-color: var(--input-border);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .form-control:focus {
+    background-color: var(--input-bg);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .modal-content {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .modal-header,
+[data-theme="dark"] .modal-footer {
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .dropdown-menu {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .dropdown-item {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .dropdown-item:hover {
+    background-color: var(--hover-bg);
+}
+
+[data-theme="dark"] .alert-info {
+    background-color: #2d2d2d;
+    border-color: #404040;
+    color: var(--text-color);
+}

@@ -1,0 +1,9 @@
+This folder is for storing images used in the application.
+
+You can add:
+- logo.png (for the sidebar and login page)
+- favicon.ico (for the browser tab)
+- other graphics
+
+The default icons are provided by Font Awesome.
+

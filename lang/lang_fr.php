@@ -1,0 +1,25 @@
+<?php
+return [
+    'settings' => 'Paramètres',
+    'profile_info' => 'Informations du Profil',
+    'change_password' => 'Changer le Mot de Passe',
+    'cabinet_info' => 'Informations du Cabinet',
+    'appearance' => 'Apparence',
+    'theme' => 'Thème',
+    'dark' => 'Sombre',
+    'light' => 'Clair',
+    'language' => 'Langue',
+    'french' => 'Français',
+    'english' => 'Anglais',
+    'arabic' => 'Arabe',
+    'notifications' => 'Notifications',
+    'email_notifications' => 'Notifications par email',
+    'appointment_reminders' => 'Rappels de rendez-vous',
+    'payment_reminders' => 'Rappels de paiement',
+    'save_changes' => 'Enregistrer les modifications',
+    'current_password' => 'Mot de passe actuel',
+    'new_password' => 'Nouveau mot de passe',
+    'confirm_password' => 'Confirmer le nouveau mot de passe',
+    'success_update' => 'Mise à jour réussie!',
+    'error_update' => 'Erreur lors de la mise à jour!'
+];

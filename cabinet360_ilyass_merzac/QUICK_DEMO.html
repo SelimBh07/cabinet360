@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabinet360 - Guide de Démarrage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #fff;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #1a1a1a;
+            border: 2px solid #D4AF37;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(212, 175, 55, 0.3);
+        }
+        h1 {
+            color: #D4AF37;
+            text-align: center;
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #999;
+            margin-bottom: 40px;
+            font-size: 18px;
+        }
+        .logo {
+            text-align: center;
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+        .step {
+            background: #2d2d2d;
+            border-left: 4px solid #D4AF37;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .step-number {
+            display: inline-block;
+            background: #D4AF37;
+            color: #000;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        .step h3 {
+            color: #D4AF37;
+            display: inline;
+            font-size: 20px;
+        }
+        .step p, .step ul {
+            margin: 15px 0 0 50px;
+            color: #ccc;
+        }
+        .step li {
+            margin: 8px 0;
+        }
+        .credentials {
+            background: #2d2d2d;
+            border: 2px solid #D4AF37;
+            padding: 25px;
+            margin: 30px 0;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .credentials h3 {
+            color: #D4AF37;
+            margin-bottom: 15px;
+        }
+        .credential-item {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .credential-label {
+            color: #999;
+            display: inline-block;
+            width: 150px;
+            text-align: right;
+            margin-right: 10px;
+        }
+        .credential-value {
+            color: #D4AF37;
+            font-weight: bold;
+            font-family: monospace;
+            font-size: 20px;
+        }
+        .btn {
+            display: inline-block;
+            background: #D4AF37;
+            color: #000;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            margin: 10px;
+            transition: all 0.3s;
+        }
+        .btn:hover {
+            background: #c49a2c;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
+        }
+        .buttons {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+        }
+        .feature {
+            background: #2d2d2d;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #444;
+        }
+        .feature-icon {
+            font-size: 40px;
+            color: #D4AF37;
+            margin-bottom: 10px;
+        }
+        .feature-title {
+            color: #D4AF37;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .alert {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid #D4AF37;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .alert-title {
+            color: #D4AF37;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        code {
+            background: #000;
+            padding: 2px 8px;
+            border-radius: 3px;
+            color: #D4AF37;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">⚖️</div>
+        <h1>Cabinet360</h1>
+        <p class="subtitle">Système de Gestion pour Cabinet d'Avocat</p>
+
+        <div class="alert">
+            <div class="alert-title">📍 Emplacement du Projet</div>
+            <p>Votre projet est actuellement à : <code>C:\Users\TG SYSTEME\Desktop\Cabinet360</code></p>
+            <p>Déplacez-le vers : <code>C:\xampp\htdocs\Cabinet360</code></p>
+        </div>
+
+        <div class="step">
+            <span class="step-number">1</span>
+            <h3>Installer XAMPP</h3>
+            <p>Si vous n'avez pas encore XAMPP :</p>
+            <ul>
+                <li>Téléchargez depuis : <a href="https://www.apachefriends.org/" style="color: #D4AF37;">https://www.apachefriends.org/</a></li>
+                <li>Installez avec les options par défaut</li>
+                <li>Démarrez XAMPP Control Panel</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <span class="step-number">2</span>
+            <h3>Démarrer les Services</h3>
+            <p>Dans XAMPP Control Panel, cliquez sur "Start" pour :</p>
+            <ul>
+                <li>✅ Apache</li>
+                <li>✅ MySQL</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <span class="step-number">3</span>
+            <h3>Créer la Base de Données</h3>
+            <ul>
+                <li>Ouvrez phpMyAdmin : <code>http://localhost/phpmyadmin</code></li>
+                <li>Cliquez sur "Nouvelle base de données"</li>
+                <li>Nom : <code>lexmanage</code></li>
+                <li>Encodage : <code>utf8mb4_unicode_ci</code></li>
+                <li>Cliquez "Créer"</li>
+                <li>Sélectionnez la base "lexmanage"</li>
+                <li>Onglet "Importer" → Choisir <code>database.sql</code></li>
+                <li>Cliquez "Exécuter"</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <span class="step-number">4</span>
+            <h3>Accéder à Cabinet360</h3>
+            <p>Ouvrez dans votre navigateur :</p>
+            <p style="text-align: center; margin: 20px 0;">
+                <code style="font-size: 18px;">http://localhost/Cabinet360/login.php</code>
+            </p>
+        </div>
+
+        <div class="credentials">
+            <h3>🔐 Identifiants de Connexion</h3>
+            <div class="credential-item">
+                <span class="credential-label">Nom d'utilisateur :</span>
+                <span class="credential-value">admin</span>
+            </div>
+            <div class="credential-item">
+                <span class="credential-label">Mot de passe :</span>
+                <span class="credential-value">admin123</span>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <a href="http://localhost/phpmyadmin" target="_blank" class="btn">
+                🗄️ Ouvrir phpMyAdmin
+            </a>
+            <a href="http://localhost/Cabinet360/login.php" target="_blank" class="btn">
+                ⚖️ Ouvrir Cabinet360
+            </a>
+        </div>
+
+        <h2 style="color: #D4AF37; margin-top: 50px; margin-bottom: 20px; text-align: center;">
+            ✨ Fonctionnalités
+        </h2>
+
+        <div class="feature-grid">
+            <div class="feature">
+                <div class="feature-icon">👥</div>
+                <div class="feature-title">Clients</div>
+                <p style="color: #999; font-size: 14px;">Gestion complète</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📁</div>
+                <div class="feature-title">Dossiers</div>
+                <p style="color: #999; font-size: 14px;">Suivi juridique</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📅</div>
+                <div class="feature-title">Rendez-vous</div>
+                <p style="color: #999; font-size: 14px;">Calendrier interactif</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">💰</div>
+                <div class="feature-title">Paiements</div>
+                <p style="color: #999; font-size: 14px">Reçus PDF</p>
+            </div>
+        </div>
+
+        <div class="alert" style="margin-top: 40px;">
+            <div class="alert-title">📚 Documentation</div>
+            <p>Pour plus d'informations, consultez :</p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li><strong>README.md</strong> - Documentation technique complète</li>
+                <li><strong>INSTALLATION.txt</strong> - Guide d'installation détaillé</li>
+            </ul>
+        </div>
+
+        <p style="text-align: center; margin-top: 40px; color: #999;">
+            © 2025 Cabinet360 - Tous droits réservés
+        </p>
+    </div>
+</body>
+</html>
+
