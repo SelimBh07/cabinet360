@@ -40,8 +40,12 @@ RUN mkdir -p /var/www/html/uploads && \
 # Configure Apache
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
+# Copy container entrypoint
+COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+
 # Expose port 80
 EXPOSE 80
 
-# Start Apache
-CMD ["apache2-foreground"]
+# Use entrypoint to write optional DB SSL CA and start Apache
+ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
