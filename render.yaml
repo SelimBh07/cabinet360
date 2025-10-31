@@ -6,23 +6,37 @@ services:
     plan: starter
     autoDeploy: true
     healthCheckPath: /
+    buildCommand: composer install --no-dev --optimize-autoloader
+    startCommand: apache2-foreground
     envVars:
       - key: APP_ENV
         value: production
-      - key: DB_HOST
-        sync: false # User will need to set this
-      - key: DB_USER
-        sync: false
-      - key: DB_PASS
-        sync: false
-      - key: DB_NAME
-        sync: false
+      - key: APP_NAME
+        value: Cabinet360
       - key: APP_URL
         fromService:
           type: web
           name: cabinet360
           property: host
+      - key: DB_HOST
+        sync: false # PlanetScale host
+      - key: DB_USER
+        sync: false # PlanetScale username
+      - key: DB_PASS
+        sync: false # PlanetScale password
+      - key: DB_NAME
+        value: cabinet360_saas
+      - key: UPLOAD_PATH
+        value: /uploads
+      - key: UPLOAD_MAX_SIZE
+        value: 5M
+      - key: SESSION_SECURE
+        value: "1"
+      - key: SESSION_TIMEOUT
+        value: "1800"
+      - key: JWT_SECRET
+        generateValue: true
     disk:
       name: uploads
       mountPath: /var/www/html/uploads
-      sizeGB: 1
+      sizeGB: 10

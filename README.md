@@ -86,6 +86,45 @@
 
 ## 🚀 Installation
 
+### Production Deployment
+
+#### Prerequisites
+- GitHub account
+- Render.com account
+- PlanetScale account
+
+#### 1. Database Setup (PlanetScale)
+1. Create a PlanetScale account at https://planetscale.com
+2. Create a new database:
+   ```bash
+   pscale database create cabinet360_saas
+   ```
+3. Import the schema:
+   ```bash
+   pscale shell cabinet360_saas main < database.sql
+   ```
+4. Get your database credentials from PlanetScale dashboard
+
+#### 2. Render Deployment
+1. Fork/clone this repository
+2. Connect your GitHub repo to Render
+3. Create a new Web Service
+4. Select "Docker" environment
+5. Configure environment variables:
+   - Copy variables from `.env.example`
+   - Set PlanetScale database credentials
+   - Set `APP_ENV=production`
+6. Deploy the service
+
+#### 3. Post-Deployment
+1. Access your application at the Render URL
+2. Update `APP_URL` in Render dashboard with the actual URL
+3. Test login functionality
+4. Verify file uploads
+5. Check database connectivity
+
+### Local Development
+
 ### Étape 1 : Télécharger et Extraire
 
 ```bash
